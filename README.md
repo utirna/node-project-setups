@@ -1,5 +1,7 @@
 # Node.js Deployment
 
+Create Account on digital ocean and get $100 credit with https://m.do.co/c/fd5797830bfc Link
+
 > Steps to deploy a Node.js app to DigitalOcean using PM2, NGINX as a reverse proxy and an SSL from LetsEncrypt
 
 ## 2. Create a droplet and log in via ssh

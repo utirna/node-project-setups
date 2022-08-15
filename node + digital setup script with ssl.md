@@ -95,6 +95,10 @@ sudo nginx -t
 
 # Restart NGINX
 sudo service nginx restart
+
+
+# External File Link Command
+ln -s /etc/nginx/sites-available/site.com.conf /etc/nginx/sites-enabled/site.com.conf
 ```
 
 ### You should now be able to visit your IP with no port (port 80) and see your app. Now let's add a domain
@@ -121,13 +125,26 @@ It may take a bit to propogate
 10. Add SSL with LetsEncrypt
 
 ```
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install python-certbot-nginx
-sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
 
-# Only valid for 90 days, test the renewal process with
-certbot renew --dry-run
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-20-04
+
+sudo certbot --nginx -d example.com -d www.example.com
+
+sudo certbot --nginx -d api.finance.educrafts.in -d www.api.finance.educrafts.in
+
+```
+
+```
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Omsairam800';
+CREATE USER 'main'@'localhost' IDENTIFIED BY 'Omsairam@000';
+GRANT ALL PRIVILEGES ON *.* TO 'main'@'localhost' WITH GRANT OPTION
+GRANT ALL PRIVILEGES ON *.* TO 'main'@'%' IDENTIFIED BY 'Omsairam@000' WITH GRANT OPTION;
+
+11. MYSQL 5.7
+
+https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-18-04
+
+mv /var/www/exam.confluenceit.in/node.march.exam/{.,}* /var/www/exam.confluenceit.in
 ```
 
 Now visit https://yourdomain.com and you should see your Node app

@@ -135,7 +135,7 @@ sudo certbot --nginx -d api.finance.educrafts.in -d www.api.finance.educrafts.in
 ```
 
 ```
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'Omsairam800';
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 CREATE USER 'main'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON *.* TO 'main'@'localhost' WITH GRANT OPTION
 GRANT ALL PRIVILEGES ON *.* TO 'main'@'%' IDENTIFIED BY 'password' WITH GRANT OPTION;
